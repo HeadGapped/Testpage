@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* ⬇️ CHANGE THIS VALUE (0-100) TO ADJUST WHITE/BLACK RATIO ⬇️ */
+        .white-section {
+            background: white;
+            width: 20%; /* ← CHANGE THIS NUMBER */
+        }
+
+        .black-section {
+            background: black;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-section"></div>
+    <div class="black-section"></div>
+</body>
+</html>
