@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Webpage</title>
+    <title>HACKED</title>
     <style>
         * {
             margin: 0;
@@ -12,25 +12,128 @@
         }
 
         body {
-            height: 100vh;
+            background: white;
+            font-family: 'Courier New', monospace;
+            color: #000;
             overflow: hidden;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        /* CHANGE THIS VALUE (0-100) TO ADJUST WHITE/BLACK RATIO*/
-        .white-section {
-            background: white;
-            width: 100%; /* CHANGE THIS NUMBER */
+        .container {
+            text-align: center;
+            animation: glitch 1s infinite;
         }
 
-        .black-section {
-            background: black;
-            flex: 1;
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            text-shadow: 3px 3px 0px #ff0000, -3px -3px 0px #00ff00;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ff0000;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .skull {
+            font-size: 4rem;
+            margin: 30px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                transform: translate(-2px, -2px);
+            }
+            60% {
+                transform: translate(2px, 2px);
+            }
+            80% {
+                transform: translate(2px, -2px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .warning {
+            border: 3px solid #ff0000;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            background: #ffcccc;
+        }
+
+        .timestamp {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="white-section"></div>
-    <div class="black-section"></div>
+    <div class="container">
+        <h1>HACKED</h1>
+        
+        <div class="skull">☠️</div>
+        
+        <h2>SYSTEM COMPROMISED</h2>
+        
+        <div class="warning">
+            <p>YOUR SECURITY HAS BEEN BREACHED</p>
+            <p>ALL YOUR DATA BELONGS TO US</p>
+            <p>WE ARE WATCHING YOU</p>
+        </div>
+        
+        <p>This site has been pwned by...</p>
+        
+        <div class="signature">~~ MR. H4CK3R ~~</div>
+        
+        <div class="timestamp">
+            <p>DEFACED ON: <span id="datetime"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Display current date and time
+        const now = new Date();
+        document.getElementById('datetime').textContent = now.toLocaleString();
+    </script>
 </body>
 </html>
